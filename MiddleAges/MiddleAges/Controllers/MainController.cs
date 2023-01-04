@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MiddleAges.Data;
 using MiddleAges.Entities;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace MiddleAges.Controllers
 {
+    [Authorize]
     public class MainController : Controller
     {
         private readonly ILogger<MainController> _logger;
